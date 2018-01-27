@@ -21,7 +21,7 @@ public class UsersBO {
 		System.out.println("I am In BO SaveUSer");
 		return userDao.saveUser(user);
 	}
-	
+	//Hi Change From Remote Repo
 	public void noOfBytesOfImage(){
 		try {
 			File file = new File("D:/hi.jpg");
