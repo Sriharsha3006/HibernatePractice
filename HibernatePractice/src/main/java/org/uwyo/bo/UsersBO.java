@@ -10,10 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.uwyo.dao.UsersDAO;
 import org.uwyo.model.Users;
-
+//This is Git Modification
 @Service
 public class UsersBO {
-	
+	//Compare
 	@Autowired
 	UsersDAO userDao;
 	
