@@ -1,0 +1,163 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.uwyo</groupId>
+  <artifactId>HibernatePractice</artifactId>
+  <packaging>war</packaging>
+  <version>1.0 SNAPSHOT</version>
+  <name>HibernatePractice Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+  	<java.version>1.8</java.version>
+  	<junit-version>4.12</junit-version>
+  	<servlet-api-version>3.1.0</servlet-api-version>
+  	<jsp-version>2.1</jsp-version>
+  	<jstl-version>1.2</jstl-version>
+  	<orcl-version>11.2.0</orcl-version>
+  	<spring.version>4.3.8.RELEASE</spring.version>
+  	<hibernate.version>4.3.11.Final</hibernate.version>
+  </properties>
+ 
+  <dependencies>
+  <!-- JUnit Dependency -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit-version}</version>
+      <scope>test</scope>
+    </dependency>
+  <!-- Servlet Dependency -->
+    <dependency>
+    	<groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+		<version>${servlet-api-version}</version>
+		<scope>provided</scope>
+    </dependency>
+  <!-- JSP Dependency -->
+    <dependency>
+    	<groupId>javax.servlet.jsp</groupId>
+    	<artifactId>jsp-api</artifactId>
+    	<version>${jsp-version}</version>
+    	<scope>provided</scope>
+    </dependency>
+  <!-- Spring Core Dependency -->	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+  <!-- Spring Context Dependency -->	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+  <!-- Spring Web Dependency -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+  <!-- Spring WebMvc Dependency -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+  <!-- Spring ORM Dependency -->	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+  <!-- Spring TEST Dependency -->	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+		<version>${spring.version}</version>
+		<scope>test</scope>
+	</dependency>
+  <!-- Spring AOP Dependency -->	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-aop</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+    	<groupId>cglib</groupId>
+    	<artifactId>cglib</artifactId>
+    	<version>3.2.5</version>
+	</dependency>
+	<dependency>
+    	<groupId>aopalliance</groupId>
+    	<artifactId>aopalliance</artifactId>
+    	<version>1.0</version>
+	</dependency>
+	
+	<dependency>
+    	<groupId>asm</groupId>
+    	<artifactId>asm</artifactId>
+    	<version>3.3.1</version>
+	</dependency>
+	
+  <!-- AspectJ Dependency -->
+	<dependency>
+  		<groupId>org.aspectj</groupId>
+  		<artifactId>aspectjweaver</artifactId>
+  		<version>1.8.9</version>
+	</dependency>
+	<dependency>
+		<groupId>org.aspectj</groupId>
+		<artifactId>aspectjrt</artifactId>
+		<version>1.8.9</version>
+	</dependency>
+	<dependency>
+		<groupId>org.aspectj</groupId>
+		<artifactId>aspectjtools</artifactId>
+		<version>1.7.4</version>
+	</dependency>
+  <!-- Oracle Dependency -->
+    <dependency>
+    	<groupId>com.oracle</groupId>
+    	<artifactId>ojdbc6</artifactId>
+    	<version>${orcl-version}</version>
+    </dependency>
+  <!-- Hibernate Dependencies -->
+  	<dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-core</artifactId>
+  		<version>${hibernate.version}</version>
+  	</dependency>
+  	
+  	<!--<dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-c3p0</artifactId>
+  		<version>${hibernate.version}</version>
+  	</dependency>  -->
+  	
+  <!-- To Return JSON Format Object -->
+  	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
+		<version>2.5.0</version>
+  	</dependency>
+  </dependencies>
+  
+  <build>
+    <finalName>HibernatePractice</finalName>
+    <plugins>
+  		<plugin>
+        	<groupId>org.apache.maven.plugins</groupId>
+        	<artifactId>maven-compiler-plugin</artifactId>
+        	<version>3.0</version>
+        	<configuration>
+          		<source>${java.version}</source>
+          		<target>${java.version}</target>
+          		<compilerArgument>-Xlint:all</compilerArgument>
+          		<showWarnings>true</showWarnings>
+          		<showDeprecation>true</showDeprecation>
+        	</configuration>
+      </plugin>
+  	</plugins>
+  </build>
+</project>
