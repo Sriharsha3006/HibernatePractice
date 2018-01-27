@@ -22,7 +22,7 @@ public class UsersBO {
 		System.out.println("I am In BO SaveUSer");
 		return userDao.saveUser(user);
 	}
-	
+	//Edited it from Remote Web
 	public void noOfBytesOfImage(){
 		try {
 			File file = new File("D:/hi.jpg");
