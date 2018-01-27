@@ -30,7 +30,7 @@ public class UsersBO {
 			BufferedImage img = ImageIO.read(file);
 			System.out.println(img);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			//hey
 			e.printStackTrace();
 		}
 	}
